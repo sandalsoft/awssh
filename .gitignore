@@ -1,5 +1,7 @@
 # OSX shit
 .DS_Store
+__template.js
+
 
 # Logs
 logs
