@@ -1,0 +1,32 @@
+{
+  "name": "awssh",
+  "version": "0.1.0",
+  "description": "SSH helper for AWS ec2 hosts",
+  "main": "awssh.js",
+  "bin": {
+    "awssh": "awssh.js"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sandalsoft/awssh.git"
+  },
+  "keywords": [
+    "aws",
+    "ec2",
+    "ssh",
+    "cli"
+  ],
+  "author": "Eric Nelson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sandalsoft/awssh/issues"
+  },
+  "homepage": "https://github.com/sandalsoft/awssh#readme",
+  "devDependencies": {
+    "aws-butler": "^3.0.1",
+    "aws-sdk": "^2.6.6"
+  }
+}
