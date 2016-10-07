@@ -1,22 +1,21 @@
 #!/usr/bin/env node
 
-// var Reservation = require('./lib/Reservation.js')
-// var fs = require('fs')
-
-// var json = JSON.parse(fs.readFileSync('./data/aws-butler.json', 'utf8'))
-// console.log('json: %j', json[0].Reservations)
-// var reservations = new Reservation(json[0].Reservations)
-// console.log('i: %j', reservations[2].Instances[0].PublicIpAddress)
-
 var AWS = require('aws-butler')
 var ec2 = new AWS.EC2({ region: 'us-east-1' })
 var Spinner = require('cli-spinner').Spinner
-
 var spinner = new Spinner('processing.. %s')
-spinner.setSpinnerString('|/-\\')
-spinner.start()
+const chalk = require('chalk')
 
-// example using promise
+// ####################
+//
+//   Main Stuff
+//
+// ####################
+
+// Setup the output and spinner
+setupCLIUI()
+
+// Get ec2 instance data
 ec2.describeInstances()
   .then(function (data) {
     spinner.stop(true)
@@ -26,6 +25,18 @@ ec2.describeInstances()
     throw err
   })
   .done()
+
+// ####################
+//
+//   Functions
+//
+// ####################
+
+function setupCLIUI () {
+  // https://github.com/helloIAmPau/node-spinner/blob/master/spinners.json
+  spinner.setSpinnerString('⠁⠂⠄⡀⢀⠠⠐⠈')
+  spinner.start()
+}
 
 function parseInstances (reservationJson) {
   let reservations = reservationJson[0].Reservations
