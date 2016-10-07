@@ -1,0 +1,110 @@
+ {
+  "InstanceId": "i-a0203191",
+  "ImageId": "ami-c481fad3",
+  "State": {
+    "Code": 16,
+    "Name": "running"
+  },
+  "PrivateDnsName": "ip-172-30-0-182.ec2.internal",
+  "PublicDnsName": "",
+  "StateTransitionReason": "",
+  "KeyName": "rMBP-13",
+  "AmiLaunchIndex": 0,
+  "ProductCodes": [],
+  "InstanceType": "t2.micro",
+  "LaunchTime": "2016-10-06T03:39:27.000Z",
+  "Placement": {
+    "AvailabilityZone": "us-east-1a",
+    "GroupName": "",
+    "Tenancy": "default"
+  },
+  "Monitoring": {
+    "State": "disabled"
+  },
+  "SubnetId": "subnet-acc3c784",
+  "VpcId": "vpc-b73ce6d2",
+  "PrivateIpAddress": "172.30.0.182",
+  "PublicIpAddress": "54.166.240.143",
+  "Architecture": "x86_64",
+  "RootDeviceType": "ebs",
+  "RootDeviceName": "/dev/xvda",
+  "BlockDeviceMappings": [
+    {
+      "DeviceName": "/dev/xvda",
+      "Ebs": {
+        "VolumeId": "vol-24a182f1",
+        "Status": "attached",
+        "AttachTime": "2016-10-06T03:39:28.000Z",
+        "DeleteOnTermination": true
+      }
+    }
+  ],
+  "VirtualizationType": "hvm",
+  "ClientToken": "dnMCt1475725166708",
+  "Tags": [
+    {
+      "Key": "Environment",
+      "Value": "dev"
+    },
+    {
+      "Key": "Owner",
+      "Value": "eric"
+    },
+    {
+      "Key": "Name",
+      "Value": "webserver"
+    }
+  ],
+  "SecurityGroups": [
+    {
+      "GroupName": "house (vpc_rule)",
+      "GroupId": "sg-3d9efa47"
+    }
+  ],
+  "SourceDestCheck": true,
+  "Hypervisor": "xen",
+  "NetworkInterfaces": [
+    {
+      "NetworkInterfaceId": "eni-8d19459f",
+      "SubnetId": "subnet-acc3c784",
+      "VpcId": "vpc-b73ce6d2",
+      "Description": "Primary network interface",
+      "OwnerId": "119459292316",
+      "Status": "in-use",
+      "MacAddress": "12:e6:95:ef:b5:0b",
+      "PrivateIpAddress": "172.30.0.182",
+      "SourceDestCheck": true,
+      "Groups": [
+        {
+          "GroupName": "house (vpc_rule)",
+          "GroupId": "sg-3d9efa47"
+        }
+      ],
+      "Attachment": {
+        "AttachmentId": "eni-attach-638a6dc9",
+        "DeviceIndex": 0,
+        "Status": "attached",
+        "AttachTime": "2016-10-06T03:39:27.000Z",
+        "DeleteOnTermination": true
+      },
+      "Association": {
+        "PublicIp": "54.166.240.143",
+        "PublicDnsName": "",
+        "IpOwnerId": "amazon"
+      },
+      "PrivateIpAddresses": [
+        {
+          "PrivateIpAddress": "172.30.0.182",
+          "Primary": true,
+          "Association": {
+            "PublicIp": "54.166.240.143",
+            "PublicDnsName": "",
+            "IpOwnerId": "amazon"
+          }
+        }
+      ]
+    }
+  ],
+  "EbsOptimized": false,
+  "EnaSupport": true
+}
